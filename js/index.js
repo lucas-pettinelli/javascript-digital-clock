@@ -23,9 +23,13 @@ function atualizacaoRelogio() {
 
 function mudarBackgroundDiaOuNoite(){
     let horaAtual = new Date().getHours();
-    if(5 < horaAtual && horaAtual < 18){
+    if(horaAtual >= 6 && horaAtual < 12){
         if (document.body) {
             document.body.style.backgroundImage = 'linear-gradient(to top, #56ccf2, #2f80ed)';
+        }
+    }else if(horaAtual >= 12 && horaAtual < 18){
+        if (document.body) {
+            document.body.style.backgroundImage = 'linear-gradient(to bottom, #265073, #ef8e38)';
         }
     } else {
         if (document.body) {
